@@ -1,0 +1,28 @@
+$colors: (
+    primary-color: #1492c8,
+    light-naviblue: #00aeef,
+    secondary-naviblue: #0090c5,
+    secondary-color: #404040,
+    dark-gray:#202020,
+    gray-border: #424242,
+    pure-white: #fff,
+    title-color:#232323,
+    dark-white:#f2f2f2,
+    blue:#242f51,
+    pure-black: #000,
+    pure-orange:#ff9900,
+   gray: #616368,
+   pure-green:#34a450,
+    link-brown: #cd2653,
+    white-boxshadow: #e2e2e2,
+    menu-border:#dedfdf,
+    insitebox-border:#c9c9c9,
+    pure-red: #ff0000,
+    contact-color: #7e7e7e,
+    contact-green : #1faf51
+
+);
+
+@function color($color-name) {
+    @return map-get($colors, $color-name)
+}

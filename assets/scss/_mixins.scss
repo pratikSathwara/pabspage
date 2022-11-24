@@ -1,0 +1,148 @@
+@mixin fonts-source($size: false, $colour: false, $weight: false, $lh: false) {
+    @if $size {
+        font-size: $size;
+    }
+
+    @if $colour {
+        color: $colour;
+    }
+
+    @if $weight {
+        font-weight: $weight;
+    }
+
+    @if $lh {
+        line-height: $lh;
+    }
+}
+
+@mixin input-placeholder {
+    &.placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder {
+        @content;
+    }
+
+    &::-moz-placeholder {
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+
+    &::-webkit-input-placeholder {
+        @content;
+    }
+}
+
+
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+    content: $content;
+    position: $pos;
+
+    @if $display {
+        display: $display;
+    }
+}
+
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -moz-transform: $property;
+    -ms-transform: $property;
+    -o-transform: $property;
+    transform: $property;
+}
+
+
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+@mixin  title-text {
+    font-size: 36px;
+    font-weight: 700;
+    color: color(title-color);
+    margin-bottom: 30px;
+    text-align: center;
+    @include tab-view{
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    @include mobile-view{
+        font-size: 25px;
+    }
+}
+@mixin buttonPrimary {
+    position: relative;
+    background: color(pure-orange);
+    color: color(pure-white);
+    font-size: 14px;
+    padding: 17px 46.95px;
+    border-radius: 6px;
+    border: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: ease-out 0.4s;
+    display: inline-block;
+    z-index: 0;
+   
+    &::before {
+        position: absolute;
+        content: "";
+        transition-duration: 0.4s;
+        z-index: -1;
+        inset: 0px auto auto 0px;
+        width: 0px;
+        height: 100%;
+    } 
+    &:hover {
+        &::before {     
+            width: 100%;
+            background-color: color(primary-color);
+           
+      } 
+    }
+}
+
+@mixin cmn_flex_items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin testimonial_quote_img{
+    content: "";
+    top: 40%;
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    display: block;
+}
+
+@mixin  contact_input_focus {
+    top: 5px;
+    font-size: 10px;
+    color: color(pure-green);
+}
+
+// @mixin backgroundimg($img) {
+//     max-width: $truncation-boundary;
+//     white-space: nowrap;
+//     overflow: hidden;
+//     text-overflow: ellipsis;
+// }

@@ -1,0 +1,332 @@
+@import "./variables";
+@import "./colors";
+@import "./mixins";
+@import "./media";
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap");
+body {
+  font-family: "Poppins", sans-serif !important;
+}
+.container {
+  max-width: 1170px;
+}
+
+.about_banner {
+  @include cmn_flex_items;
+  position: relative;
+  width: 100%;
+  min-height: 85vh;
+  background: linear-gradient(rgba(0, 27, 52, 0.84), rgba(0, 27, 52, 0.84)),
+    url(../image/about-banner.png) no-repeat center;
+  background-size: cover;
+  padding: 2rem 0;
+  text-align: center;
+  color: color(pure-white);
+  @include mobile-view {
+    min-height: 50vh;
+  }
+  h2 {
+    
+    
+    font-size: 68px;
+    max-width: 950px;
+    margin: 0 auto;
+    font-weight: 600;
+    @include ipad-view {
+      font-size: 45px;
+      max-width: 100%;
+    }
+    @include tab-view {
+      font-size: 30px;
+    }
+    @include mobile-view {
+      font-size: 25px;
+    }
+  }
+}
+.about_vision_sec {
+  position: relative;
+  padding: 50px 0px;
+  @include mobile-view {
+    padding: 30px 0;
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 47px;
+    font-size: 36px;
+    font-weight: 700;
+    color: color(title-color);
+    @include mobile-view {
+      font-size: 25px;
+    }
+  }
+  img {
+    display: block;
+    max-width: 100%;
+    @include tab-view {
+      margin: 0 auto 20px;
+    }
+  }
+  p {
+    font-size: 15px;
+    max-width: 560px;
+    @include tab-view {
+      padding: 0 10px;
+      max-width: 100%;
+    }
+  }
+}
+.why_pabs_sec {
+  position: relative;
+  padding: 50px 0;
+  background: url(../image/why_pabs_banner.png) no-repeat center;
+  background-size: cover;
+  @include mobile-view {
+    padding: 30px 0;
+  }
+  h2 {
+    text-align: center;
+    @include title-text;
+    font-weight: 700;
+    @include mobile-view {
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+  }
+  .vision_box {
+    display: flex;
+    gap: 15px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: 50px auto 0;
+    @include ipad-view {
+      flex-wrap: wrap;
+      margin: 30px auto 0;
+      gap: 20px;
+    }
+    .box_text {
+      padding: 25px 8px;
+      background-color: color(pure-white);
+      display: flex;
+      width: 213px;
+      text-align: center;
+      align-items: center;
+      justify-content: flex-start;
+      border-radius: 6px;
+      flex-direction: column;
+      box-shadow: 0px 13px 20px color(white-boxshadow);
+      transition: 0.3s ease;
+      @include ipad-view {
+        width: 48%;
+      }
+      @include mobile-view {
+        width: 213px;
+      }
+      &:hover {
+        transform: scale(1.1);
+        @include tab-view {
+          transform: scale(1);
+        }
+      }
+      img {
+        width: 60px;
+        height: 60px;
+        padding: 10px;
+        object-fit: contain;
+        transition: 0.3s ease;
+        &:hover {
+          box-shadow: 0px 5px 15px color(white-boxshadow);
+        }
+      }
+      h5 {
+        font-size: 45px;
+        font-weight: 700;
+        color: color(primary-color);
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 15px;
+      }
+    }
+  }
+}
+.we_believe_sec {
+  position: relative;
+  padding: 50px 0;
+  @include mobile-view {
+    padding: 30px 0;
+  }
+  .title {
+    margin-bottom: 47px;
+    text-align: center;
+    @include tab-view {
+      margin-bottom: 30px;
+    }
+    h2 {
+      @include title-text;
+    }
+  }
+  .believe_info {
+    font-size: 15px;
+    padding-right: 65px;
+    @include ipad-view {
+      padding: 0 0 30px 0;
+    }
+    a {
+      color: color(link-brown);
+      transition: 0.5s all;
+      &:hover {
+        color: color(pure-orange);
+      }
+    }
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    @include ipad-view {
+      justify-content: center;
+    }
+    li {
+      width: 200px;
+      @include cmn_flex_items;
+      text-align: center;
+      padding: 30px 20px;
+      min-height: 140px;
+      box-shadow: 3px 3px 10px rgb(0 0 0 / 16%), 3px 3px 10px color(pure-white);
+      border-radius: 10px;
+      transition: 0.3s all;
+      p {
+        font-size: 15px;
+        line-height: 20px;
+        font-weight: 500;
+      }
+      @include ipad-view {
+        width: 45%;
+      }
+      @include mobile-view {
+        width: 200px;
+      }
+      &:hover {
+        background: color(primary-color);
+        color: color(pure-white);
+      }
+    }
+  }
+}
+.PABS_Value_sec {
+  position: relative;
+  padding: 50px 0;
+  background: url(../image/about-value-banner.jpg) no-repeat center;
+  background-size: cover;
+  @include mobile-view {
+    padding: 30px 0;
+  }
+  .value_box_main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+
+    li {
+      width: 23%;
+      padding: 60px 10px;
+      display: flex;
+      border: 2px solid color(pure-white);
+      text-align: center;
+      color: color(pure-white);
+
+      @include ipad-view {
+        width: 48%;
+      }
+      @include tab-view {
+        padding: 30px 10px;
+      }
+      @include mobile-view {
+        width: 100%;
+        padding: 30px 10px;
+      }
+      .text-box {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        h4 {
+          font-size: 23px;
+          text-transform: uppercase;
+          font-weight: 600;
+          margin: 4.5rem auto 2.5rem;
+          @include tab-view {
+            margin: 1.5rem auto 1.5rem;
+          }
+        }
+        p {
+          font-size: 15px;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+}
+.partner_with_pabs_sec {
+  position: relative;
+  padding: 50px 0;
+  width: 100%;
+  background: url(../image/we-believe-banner.jpg) no-repeat center;
+  background-size: cover;
+  @include mobile-view {
+    padding: 30px 0;
+  }
+  .title {
+    margin-bottom: 47px;
+    text-align: center;
+    @include mobile-view {
+      margin-bottom: 30px;
+    }
+    h2 {
+      @include title-text;
+    }
+  }
+  .advantage_list_box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+    .text_box {
+      width: 358px;
+      display: flex;
+      flex-direction: column;
+      padding: 40px;
+      background: color(pure-white);
+      transition: 0.3s all;
+      border-radius: 10px;
+      @include tab-view {
+        width: 47%;
+        padding: 20px;
+      }
+      @include mobile-view {
+        width: 100%;
+      }
+      h6 {
+        font-size: 17px;
+        margin-bottom: 10px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      &:hover {
+        background: color(primary-color);
+        color: color(pure-white);
+      }
+    }
+  }
+}

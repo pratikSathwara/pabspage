@@ -1,0 +1,171 @@
+@import "./variables";
+@import "./colors";
+@import "./mixins";
+@import "./media";
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap");
+body {
+  font-family: "Poppins", sans-serif !important;
+}
+
+
+.security_banner {
+  @include cmn_flex_items;
+  position: relative;
+  width: 100%;
+  min-height: 85vh;
+  background: linear-gradient(rgba(0, 27, 52, 0.84), rgba(0, 27, 52, 0.84)),
+    url(../image/it-banner.jpg) no-repeat center;
+  background-size: cover;
+  padding: 2rem 0;
+  text-align: center;
+  color: color(pure-white);
+  @include mobile-view {
+    min-height: 50vh;
+  }
+  .banner_text{
+  max-width: 600px;
+  margin: 0 auto;
+  h2 {
+    font-size: 30px;
+    margin-bottom:30px ;
+    font-weight: 600;
+    @include ipad-view {
+      font-size: 45px;
+      max-width: 100%;
+    }
+    @include tab-view {
+      font-size: 30px;
+    }
+    @include mobile-view {
+      font-size: 25px;
+    }
+  }
+}
+}
+
+.security_standards_section{
+  padding: 50px 0;
+  position: relative;
+  text-align: center;
+  @include mobile-view{
+    padding: 30px 5px;
+  }
+  h2{
+    font-size: 30px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    @include tab-view{
+      font-size: 23px;
+    }
+  }
+  .security_info_box{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+   margin-top: 120px;
+   @include mobile-view{
+    margin-top: 70px;
+   }
+    li{
+      position: relative;
+      width: 46%;
+    margin: 0 2%;
+    padding: 25px 50px;
+    background: color(dark-white);
+    border-radius: 10px;
+    color: color(title-color);
+    
+    @include ipad-view{
+      width: 100%;
+      &:nth-child(1){
+        margin-bottom: 100px;
+        @include mobile-view{
+          margin-bottom: 70px;
+        }
+      }
+    }
+    img{
+      width: 128px;
+      object-fit: contain;
+      position: absolute;
+      margin: 0 auto;
+      top: -70px;
+      left: 0;
+      right: 0;
+      border-radius: 50%;
+      padding: 10px;
+      background: color(pure-white);
+      border: 2px solid color(secondary-naviblue);
+      @include mobile-view{
+        width: 100px;
+        top: -50px;
+      }
+    }
+    h6{
+      margin: 60px auto 25px;
+      font-size: 18px;
+      @include mobile-view{
+        margin: 45px auto 15px;
+      }
+    }
+    p{
+      font-size: 15px;
+      line-height: 27px;
+    }
+    
+    }
+  }
+}
+
+.physical_infrastructure_sec{
+  position: relative;
+  padding: 50px 0;
+  background-color: color(dark-white);
+  .title_text{
+    text-align: center;
+    h2{
+    font-size: 30px;
+    margin-bottom: 40px;
+    font-weight: 700;
+    }
+    p{
+      font-size: 15px;
+    line-height: 25px;
+    }
+    }
+    ul{
+      display: flex;
+      justify-content: space-between;
+      margin: 40px 0;
+      
+      row-gap: 20px;
+      @include tab-view{
+        flex-wrap: wrap;
+      }
+      li{
+        width: 32%;
+        padding: 30px 25px;
+        box-shadow: 0px 13px 20px color(white-boxshadow);
+        display: flex;
+        background: color(pure-white);
+        border-radius: 10px;
+        margin: 1%;
+        @include tab-view{
+          width: 100%;
+          
+          margin: 0;
+        }
+        img{
+          max-width: 45px;
+          object-fit: contain;
+        }
+        p{
+          margin-left: 20px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
