@@ -1527,7 +1527,10 @@ body {
   width: 100%;
   background-color: #1492c8;
 }
-.insights-section .whitepaper-box .box-button .cmn-btn img {
+.insights-section .whitepaper-box .box-button .cmn-btn picture {
+  display: inline-block;
+}
+.insights-section .whitepaper-box .box-button .cmn-btn picture img {
   margin: 0 9px 0 0;
   width: 28px;
 }

@@ -222,7 +222,8 @@ header .header_top_background .header_top_text .header-contact-info {
     padding-top: 8px;
   }
 }
-header .header_top_background .header_top_text .header-contact-info a, header .header_top_background .header_top_text .header-contact-info i {
+header .header_top_background .header_top_text .header-contact-info a,
+header .header_top_background .header_top_text .header-contact-info i {
   color: #fff;
 }
 @media (max-width: 991px) {

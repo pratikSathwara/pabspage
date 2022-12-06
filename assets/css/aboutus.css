@@ -52,7 +52,7 @@ body {
 
 .about_vision_sec {
   position: relative;
-  padding: 50px 0px;
+  padding: 50px 5px;
 }
 @media (max-width: 575px) {
   .about_vision_sec {
@@ -93,7 +93,7 @@ body {
 
 .why_pabs_sec {
   position: relative;
-  padding: 50px 0;
+  padding: 50px 5px;
   background: url(../image/why_pabs_banner.png) no-repeat center;
   background-size: cover;
 }
@@ -196,7 +196,7 @@ body {
 
 .we_believe_sec {
   position: relative;
-  padding: 50px 0;
+  padding: 50px 5px;
 }
 @media (max-width: 575px) {
   .we_believe_sec {
@@ -293,7 +293,7 @@ body {
 
 .PABS_Value_sec {
   position: relative;
-  padding: 50px 0;
+  padding: 50px 5px;
   background: url(../image/about-value-banner.jpg) no-repeat center;
   background-size: cover;
 }
@@ -359,7 +359,7 @@ body {
 
 .partner_with_pabs_sec {
   position: relative;
-  padding: 50px 0;
+  padding: 50px 5px;
   width: 100%;
   background: url(../image/we-believe-banner.jpg) no-repeat center;
   background-size: cover;
@@ -412,7 +412,7 @@ body {
   padding: 40px;
   background: #fff;
   transition: 0.3s all;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 @media (max-width: 767px) {
   .partner_with_pabs_sec .advantage_list_box .text_box {

@@ -15,7 +15,7 @@ $(document).ready(function(){
     dots: true,
     speed: 1000,
     infinite: true,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 3000,
     nextArrow: false,
     prevArrow: false,
@@ -83,6 +83,15 @@ $(document).ready(function(){
       dots: true,
       speed: 1000,
       infinite: true,
+      // autoplay: true,
+      autoplaySpeed: 3000,
+      nextArrow: false,
+      prevArrow: false,
+    });
+    $('.infrastructure_slider_main').slick({
+      dots: true,
+      speed: 1000,
+      infinite: true,
       autoplay: true,
       autoplaySpeed: 3000,
       nextArrow: false,
@@ -102,10 +111,6 @@ $(document).ready(function(){
       });
     
 });
-
-
-
-
          
 $('input,textarea').val("");
 $('.form-group input, .form-group textarea').focusout(function() {
@@ -118,10 +123,7 @@ $('.form-group input, .form-group textarea').focusout(function() {
   }
 });
 
-
-
 window.onscroll = function() {scrollFunction()};
-
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     document.getElementById("scroll_top").style.display = "block";
@@ -130,7 +132,6 @@ function scrollFunction() {
   }
 }
 // When the user clicks on the button, scroll to the top of the document
- 
 
 $('.count').each(function () {
   $(this).prop('Counter',0).animate({
@@ -144,7 +145,6 @@ $('.count').each(function () {
   });
 });
 
-
 $(window).scroll(function () {
   if ($(this).scrollTop() > 150) {
     $('#header').addClass("sticky-top");
@@ -152,3 +152,4 @@ $(window).scroll(function () {
     $('#header').removeClass("sticky-top");
   }
 });
+
